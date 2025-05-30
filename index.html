@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000; /* Black background */
+            color: #ffffff; /* White text for contrast */
+        }
+        .section {
+            min-height: 100vh; /* Ensure sections take full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 1rem; /* Responsive padding */
+            text-align: center;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #a0a0a0; /* Lighter grey on hover */
+            transform: translateY(-2px);
+        }
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <header class="fixed top-0 left-0 right-0 bg-black bg-opacity-90 z-50 shadow-lg rounded-b-xl">
+        <div class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="text-3xl font-bold text-white mb-4 sm:mb-0">
+                <a :text-gray-400 transition duration-300"> Jelly's Portfolio </a>
+            </div>
+
+            <nav class="hidden sm:flex space-x-8">
+		<a href="#home" class="nav-link text-lg font-medium text-white hover:text-gray-400 rounded-md p-2"> Home Page</a>
+                <a href="#about" class="nav-link text-lg font-medium text-white hover:text-gray-400 rounded-md p-2"> About Me</a>
+                <a href="#photography" class="nav-link text-lg font-medium text-white hover:text-gray-400 rounded-md p-2">Photography</a>
+                <a href="#edits" class="nav-link text-lg font-medium text-white hover:text-gray-400 rounded-md p-2">Editing</a>
+                <a href="#3d" class="nav-link text-lg font-medium text-white hover:text-gray-400 rounded-md p-2">3D</a>
+                <a href="#drawing" class="nav-link text-lg font-medium text-white hover:text-gray-400 rounded-md p-2">Some of My Drawing</a>
+            </nav>
+
+            <div class="sm:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden sm:hidden bg-black py-4 rounded-b-xl">
+            <nav class="flex flex-col items-center space-y-4">
+		<a href="#about" class="nav-link text-lg font-medium text-white hover:text-gray-400 rounded-md p-2 w-full text-center">All About Me</a>
+                <a href="#photography" class="nav-link text-lg font-medium text-white hover:text-gray-400 rounded-md p-2 w-full text-center">Photography</a>
+                <a href="#edits" class="nav-link text-lg font-medium text-white hover:text-gray-400 rounded-md p-2 w-full text-center">Explore My Edits</a>
+                <a href="#3d" class="nav-link text-lg font-medium text-white hover:text-gray-400 rounded-md p-2 w-full text-center">3D</a>
+                <a href="#drawing" class="nav-link text-lg font-medium text-white hover:text-gray-400 rounded-md p-2 w-full text-center">Some of My Drawing</a>
+            </nav>
+        </div>
+	
+    </header>
+    <section id="home" class="section bg-gradient-to-br from-pink-900 to-black pt-24">
+        <div class="container mx-auto px-4">
+	<!-- ✅ Center the image horizontally -->
+	<div class="flex justify-center mb-6">
+	 <img src="Homepage.png" alt="Profile Picture" class="profile-pic w-48 h-48 rounded-full object-cover border-4 border-white shadow-lg">
+	</div>
+<h1 class="text-5xl md:text-7xl font-extrabold mb-6 animate-fade-in-up">
+   Exploring My Creative World
+</h1>
+<p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up delay-200">
+   The Art of the Image: Design, Editing, and Photography
+</p>
+</div>
+    </section>
+
+    <section id="about" class="section bg-black border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">All About Me</h2>
+            <div class="max-w-4xl mx-auto text-lg md:text-xl leading-relaxed text-gray-300">
+                <p class="mb-4">
+                   My name is Jane, and my passion for photography started early. My mother always said I loved capturing moments with our old family camera, directing everyone with a playful "Okay, one, two, three… click!" Everyone was a subject, their portraits a testament to my childhood. I started taking landscape photos with my phone, and that's when my love for photography truly bloomed.
+                </p>
+                <p>
+                   Every trip became a chance to capture breathtaking views. I learned to appreciate even the smallest places through the lens of my camera. This led me to explore different techniques, master camera use, and discover the power of photo enhancement. My love for photography continues to grow, each image a new chapter in my ongoing journey.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="photography" class="section bg-gray-950 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">Photography</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                My camera is my memory keeper. Each click, a moment preserved.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="album-outdoor.html">
+		<div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition duration-300">
+		<div class="p-6">
+		<img src="outdoor4.jpg"
+         	 alt="Outdoor Photography"
+          	class="w-full h-auto mb-4 rounded-lg shadow-md object-cover">
+		<h3 class="text-2xl font-semibold mb-2">Outdoor Photography</h3>
+		<p class="text-gray-400">Capturing the city's unique angles and light.</p>
+		</div>
+		</div>
+		</a>
+                <a href="album-Street photography.html">
+		<div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition duration-300">
+		<div class="p-6">
+		<img src="IMG_7511.jpg"
+         	 alt="Street photography"
+          	class="w-full h-auto mb-4 rounded-lg shadow-md object-cover">
+		<h3 class="text-2xl font-semibold mb-2">Street photography</h3>
+		<p class="text-gray-400">Exploring the peaceful beauty of landscape.</p>
+		</div>
+		</div>
+		</a>
+                <a href="album-Macro photography.html">
+		<div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition duration-300">
+		<div class="p-6">
+		<img src="Macro 3.jpg"
+         	 alt="Macro photography"
+          	class="w-full h-auto mb-4 rounded-lg shadow-md object-cover">
+		<h3 class="text-2xl font-semibold mb-2">Macro photography</h3>
+		<p class="text-gray-400">Telling stories through expressive portraits.</p>
+		</div>
+		</div>
+		</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="edits" class="section bg-black border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">Editing</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                See how I transform raw images into captivating visuals with post-processing.
+            </p>
+           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Poster Card -->
+<a href="Poster.html" class="block">
+<div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition duration-300">
+<img src="poster_cover.jpg" alt="Edited Image 1" class="w-full h-64 object-cover">
+<div class="p-6">
+<h3 class="text-2xl font-semibold mb-2">Movie Poster</h3>
+<p class="text-gray-400">Enhancing the mood and atmosphere.</p>
+</div>
+</div>
+</a>
+<!-- Logo Card -->
+<a href="Logo.html" class="block">
+<div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition duration-300">
+<img src="Logo_cover.png" alt="Edited Image 2" class="w-full h-64 object-cover">
+<div class="p-6">
+<h3 class="text-2xl font-semibold mb-2">Logo</h3>
+<p class="text-gray-400">Making colors vibrant and eye-catching.</p>
+</div>
+</div>
+</a>
+<!-- Commission Card -->
+<div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition duration-300">
+<img src="some of my commission cover.png" alt="Edited Image 3" class="w-full h-64 object-cover">
+<div class="p-6">
+<h3 class="text-2xl font-semibold mb-2">Some of my Commission</h3>
+<p class="text-gray-400">Applying classic film-inspired tones.</p>
+</div>
+</div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="3d" class="section bg-gray-950 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">3D Creations</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                Dive into my world of three-dimensional art and design.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+		<div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition duration-300">
+	<a href="Tea.html" target="_blank">
+	<img src="1.png" alt="3D Render 1" class="w-full h-64 object-cover">
+	</a>
+	<div class="p-6">
+	<h3 class="text-2xl font-semibold mb-2">Picnic Scene</h3>
+	<p class="text-gray-400">Bringing structures to life digitally.</p>
+	</div>
+	</div>
+	<div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition duration-300">
+	<a href="sofa.html" target="_blank">
+	<img src="sofa cover.png" alt="3D Render 2" class="w-full h-64 object-cover">
+	</a>
+	<div class="p-6">
+	<h3 class="text-2xl font-semibold mb-2">Sofa</h3>
+	<p class="text-gray-400">Crafting unique 3D characters.</p>
+	</div>
+	</div>
+<div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition duration-300">
+<a href="cuckoo.html" target="_blank">
+<img src="renderd cuckoo_cover_1.png" alt="3D Render 3" class="w-full h-64 object-cover">
+</a>
+<div class="p-6">
+<h3 class="text-2xl font-semibold mb-2">Cuckoo Clock</h3>
+<p class="text-gray-400">Visualizing products in three dimensions.</p>
+</div>
+</div>
+</div>
+        </div>
+    </section>
+
+    <section id="drawing" class="section bg-black border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">Some of My Art</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                A glimpse into my hand-drawn and digital illustrations.
+            </p>
+           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+	<!-- Drawing 1 -->
+	<a href="Drawing.html" class="block">
+	<div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition duration-300">
+	<img src="Cover sketch.png" alt="Drawing 1" class="w-full h-64 object-cover">
+	<div class="p-6">
+	<h3 class="text-2xl font-semibold mb-2">Random Sketch</h3>
+	<p class="text-gray-400">Quick sketches and concept art.</p>
+	</div>
+   </div>
+</a>
+	<!-- Drawing 2 -->
+	<a href="Painting.html" class="block">
+	<div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition duration-300">
+	<img src="IMG_5214.jpg" alt="Drawing 2" class="w-full h-64 object-cover">
+	<div class="p-6">
+	<h3 class="text-2xl font-semibold mb-2">Random Paintings</h3>
+	<p class="text-gray-400">Vibrant digital artworks.</p>
+	</div>
+     </div>
+   </a>
+</div>
+              
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<section id="contact" class="section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-pink-accent animate-fade-in-up">Get In Touch</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-200">
+                Connect with me and see more of my work on Instagram!
+            </p>
+            <a href="https://www.instagram.com/your_instagram_handle/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center bg-pink-accent text-white px-8 py-3 rounded-full text-xl font-semibold
+                      hover:bg-pink-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.002 3.797.048.843.04 1.48.153 2.075.356.68.23 1.25.555 1.745 1.049.494.495.819 1.065 1.049 1.745.203.595.316 1.232.356 2.076.046 1.013.048 1.377.048 3.797s-.002 2.43-.048 3.797c-.04.844-.153 1.48-.356 2.076-.23.68-.555 1.25-1.049 1.745-.495.494-1.065.819-1.745 1.049-.595.203-1.232.316-2.076.356-1.013.046-1.377.048-3.797.048s-2.43-.002-3.797-.048c-.844-.04-1.48-.153-2.076-.356-.68-.23-1.25-.555-1.745-1.049-.494-.495-.819-1.065-1.049-1.745-.203-.595-.316-1.232-.356-2.076-.046-1.013-.048-1.377-.048-3.797s.002-2.43.048-3.797c.04-.844.153-1.48.356-2.076.23-.68.555-1.25 1.049-1.745.495-.494 1.065-.819 1.745-1.049.595-.203 1.232-.316 2.076-.356C9.885 2.002 10.249 2 12.315 2zm0 2.16c-2.414 0-2.686.003-3.65.048-.716.035-1.04.11-1.28.195-.456.15-.791.319-1.05.579-.26.26-.43.593-.579 1.05-.085.24-.16.564-.195 1.28-.045.964-.048 1.236-.048 3.65s.003 2.414.048 3.65c.035.716.11 1.04.195 1.28.15.456.319.791.579 1.05.26.26.593.43 1.05.579.24.085.564.16 1.28.195.964.045 1.236.048 3.65.048s2.414-.003 3.65-.048c.716-.035 1.04-.11 1.28-.195.456-.15.791-.319 1.05-.579.26-.26.43-.593.579-1.05.085-.24.16-.564.195-1.28.045-.964.048-1.236.048-3.65s-.003-2.414-.048-3.65c-.035-.716-.11-1.04-.195-1.28-.15-.456-.319-.791-.579-1.05-.26-.26-.593-.43-1.05-.579-.24-.085-.564-.16-1.28-.195-.964-.045-1.236-.048-3.65-.048zm0 6.636c-2.481 0-4.5 2.019-4.5 4.5s2.019 4.5 4.5 4.5 4.5-2.019 4.5-4.5-2.019-4.5-4.5-4.5zm0 7.374c-1.588 0-2.874-1.286-2.874-2.874s1.286-2.874 2.874-2.874 2.874 1.286 2.874 2.874-1.286 2.874-2.874 2.874zm5.223-10.428c-.628 0-1.14-.512-1.14-1.14s.512-1.14 1.14-1.14 1.14.512 1.14 1.14-.512 1.14-1.14 1.14z" clip-rule="evenodd" />
+                </svg>
+                My Instagram
+            </a>
+        </div>
+    </section>
+   
+
+
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center rounded-t-xl">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Optional: Close mobile menu if clicked outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Add simple animations on scroll (optional, for a more dynamic feel)
+        const sections = document.querySelectorAll('.section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up-visible');
+                } else {
+                    entry.target.classList.remove('animate-fade-in-up-visible'); // Optional: remove animation on scroll out
+                }
+            });
+        }, { threshold: 0.1 }); // Trigger when 10% of the section is visible
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Define keyframes for animations if not already defined by Tailwind (Tailwind's utility classes are usually sufficient)
+        // For custom animations, you might need to add these to your style block or a separate CSS file.
+        // For this example, we'll rely on simple opacity/transform changes which Tailwind handles well.
+        // If you want more complex animations, let me know!
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Photo Gallery</title>
+<style>
+   body {
+     font-family: Arial, sans-serif;
+     background-color: #f8f8f8;
+     margin: 0;
+     padding: 20px;
+   }
+   h1 {
+     text-align: center;
+     font-size: 3em;
+     margin-bottom: 40px;
+     color: #333;
+   }
+   .gallery {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr); /* 2 columns */
+     gap: 20px;
+     max-width: 800px;
+     margin: 0 auto;
+   }
+   .gallery img {
+     width: 100%;
+     height: auto;
+     border-radius: 10px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+     transition: transform 0.3s ease;
+   }
+   .gallery img:hover {
+     transform: scale(1.05);
+   }
+</style>
+</head>
+<body>
+<h1>Album Outdoor</h1>
+<div class="gallery">
+<img src="Outdoor3.jpg" alt="Photo 1">
+<img src="Outdoor2.jpg" alt="Photo 2">
+<img src="outdoor.jpg" alt="Photo 3">
+<img src="IMG_8908.jpg" alt="Photo 4">
+</div>
+</body>
+</html>
